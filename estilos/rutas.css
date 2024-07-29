@@ -21,7 +21,7 @@ body {
     padding: 1.9em;
     display: flex;
     align-items: center;
-    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.3); /* Agrega sombra para profundidad */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3); /* Agrega sombra para profundidad */
     margin-top: 5px; /* Espacio debajo de la franja azul */
 }
 
@@ -291,6 +291,7 @@ footer {
     width: 80%; /* Ajusta el ancho según tus necesidades */
     max-width: 1000px; /* Máximo ancho opcional para pantallas grandes */
     padding-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 

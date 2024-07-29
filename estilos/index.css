@@ -8,39 +8,56 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.navbar {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.top-bar {
+    background-color: #003366; /* Azul oscuro para la franja */
+    height: 18px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Ancho completo */
+    clip-path: polygon(-10% 0, 100% 0, 98% 100%, -10% 100%); /* Forma con extremos diagonales */
 }
 
-.navbar .logo a {
+.navbar {
+    background-color: #ffffff;
     color: white;
-    text-decoration: none;
-    font-size: 1.5em;
+    padding: 1.9em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.8); /* Agrega sombra para profundidad */
+    margin-top: 5px; /* Espacio debajo de la franja azul */
+}
+
+.navbar .logo img {
+    height: 80px; /* Ajusta el tamaño según sea necesario */
+    margin-left: 200px; /* Ajusta según sea necesario */
+    margin-top: 2px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    flex-grow: 1;
+    justify-content: center; /* Centra los enlaces */
+    margin-top: 0; /* Elimina margen superior para alinear bien con el logo */
 }
 
 .nav-links li {
-    margin-left: 2em;
+    margin-left: 1.5em;
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(129, 129, 129);
     text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s ease;
+    font-size: 1.2em;
+    font-weight: bolder;
+    letter-spacing: 0.05em; /* Más separación entre letras */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Efecto suave para color de fondo */
+    padding: 0.5em; /* Espacio interno para el efecto de fondo */
+    border-radius: 4px; /* Bordes redondeados */
 }
 
-.nav-links a:hover {
-    color: #ddd;
+.nav-links a:hover,
+.nav-links a.selected {
+    
+    color: #003366; /* Azul oscuro para el fondo */
 }
 
 .content {
@@ -55,4 +72,252 @@ body {
 
 .content p {
     font-size: 1.2em;
+}
+
+.banner {
+    position: relative; /* Necesario para el posicionamiento del pseudo-elemento y el cuadro de información */
+    width: 100%; /* Asegura que el contenedor de la imagen ocupe todo el ancho */
+    overflow: hidden; /* Evita que el pseudo-elemento se desborde del contenedor */
+}
+
+.banner-image {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
+    position: relative; /* Necesario para el pseudo-elemento */
+    z-index: 1; /* Coloca la imagen sobre el pseudo-elemento */
+    filter: blur(4px); /* Aplica desenfoque a la imagen */
+}
+
+.banner::before {
+    content: ""; /* El pseudo-elemento necesita un contenido vacío */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0); /* Fondo transparente para que se vea la imagen */
+    filter: blur(3px); /* Aplica el desenfoque a toda la imagen */
+    z-index: -1; /* Coloca el pseudo-elemento detrás de la imagen */
+    clip-path: inset(20px 0 0 0); /* Aplica el desenfoque solo a la parte inferior */
+}
+
+.info-box {
+    position: absolute;
+    top: 50%; /* Centrado verticalmente */
+    left: 35.5%; /* Desplazado un poco hacia la izquierda */
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 570px; /* Ancho predeterminado */
+    height: 230px; /* Alto predeterminado */
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Sombra más sutil alrededor del cuadro */
+    text-align: left; /* Alinea el texto a la izquierda */
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.info-title {
+    color: #003366; /* Azul oscuro */
+    font-size: 2.2em; /* Tamaño de fuente mayor para el título */
+    font-weight: 750;
+    margin-top: 10px;
+    margin-left: -4px;
+}
+
+.info-subtitle {
+    color: #777777; /* Gris */
+    font-size: 1.2em; /* Tamaño de fuente un poco menor para el subtítulo */
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: -2px;
+}
+
+.info-box p {
+    font-size: 1em;
+}
+
+
+.info-button {
+    background-color: #003366;
+    color: white;
+    padding: 0.7em 1.7em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+    margin-top: auto;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.info-button:hover {
+    background-color: #002244;
+}
+
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 1em; /* Espacio entre los cuadros */
+    padding: 1em; /* Espacio alrededor del contenedor */
+    justify-items: center; /* Centra los cuadros horizontalmente */
+    margin: 0 auto; /* Centra el contenedor dentro del cuerpo */
+    max-width: 1200px; /* Ancho máximo del contenedor para limitar el espacio */
+    margin-bottom: 60px;
+}
+
+.card {
+    background-color: #003366; /* Azul oscuro para los cuadros */
+    color: white; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1em;
+    text-align: center;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Sombra más sutil alrededor del cuadro */
+    position: relative; /* Necesario para el ajuste de la altura */
+    aspect-ratio: 1; /* Mantiene una relación de aspecto 1:1 para un diseño cuadrado */
+    max-width: 290px; /* Tamaño máximo para los cuadros, un poco más grande */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor hasta el max-width */
+}
+
+
+.card-logo {
+    width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-bottom: 1em;
+    margin-top: 15px;
+}
+
+.card-title {
+    font-size: 1.4em; /* Tamaño de fuente del título */
+    margin-bottom: 1em;
+}
+
+.card-description {
+    font-size: 16px !important; /* Tamaño de fuente de la descripción */
+}
+
+.solution-section {
+    padding: 2em;
+    text-align: center;
+}
+
+.solution-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+.line {
+    border: 0;
+    border-top: 2px solid #003366; /* Línea azul debajo del título */
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+.solution-title {
+    background-color: #ffffff; /* Fondo claro igual al de la sección */
+    padding: 0 1em;
+    margin: 0;
+    color: #003366; /* Azul oscuro para el título */
+    font-size: 2.5em; /* Tamaño del título */
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+}
+
+.solution-description {
+    font-size: 1.4em !important; /* Tamaño de fuente un poco menor para el texto */
+    color: #333333; /* Color de texto oscuro */
+    text-align: justify; /* Justifica el texto */
+    margin: 0 auto; /* Centra el texto en la sección */
+    max-width: 1200px; /* Opcional: Limita el ancho máximo del texto */
+}
+
+footer {
+    background-color: #003366; /* Azul oscuro para el fondo del footer */
+    color: white; /* Texto blanco */
+    padding: 1em 0; /* Espacio alrededor del contenido */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Posición relativa para el contenido del footer */
+    bottom: 0; /* Asegura que el footer esté en la parte inferior */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Disposición vertical de los elementos */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.footer-text {
+    margin-top: -20px;
+    margin-bottom: 10px; /* Espacio debajo del texto */
+    font-size: 1.4em
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column; /* Disposición vertical del ícono y el texto */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.social-link {
+    display: flex;
+    align-items: center; /* Centra verticalmente el ícono y el texto */
+    color: white; /* Asegura que el texto sea blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.footer-icon {
+    width: 24px; /* Ajusta el tamaño del ícono según sea necesario */
+    height: auto; /* Mantiene la proporción del ícono */
+    margin-right: 0.5em; /* Espacio entre el ícono y el texto */
+}
+
+.footer-social p {
+    margin: 0; /* Elimina los márgenes del párrafo */
+}
+
+.fixed-icons {
+    position: fixed; /* Fija el contenedor en la esquina */
+    bottom: 20px; /* Espacio desde el borde inferior */
+    right: 20px; /* Espacio desde el borde derecho */
+    display: flex; /* Alinea los íconos horizontalmente */
+    flex-direction: column; /* Disposición vertical de los íconos */
+    gap: 10px; /* Espacio entre los íconos */
+    z-index: 1000; /* Asegura que los íconos estén encima de otros elementos */
+}
+
+.icon-link {
+    display: flex; /* Centra el ícono */
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Fondo blanco para los íconos */
+    border-radius: 50%; /* Forma circular */
+    padding: 10px; /* Espacio interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el efecto de profundidad */
+}
+
+.fixed-icon {
+    width: 40px; /* Tamaño del ícono */
+    height: auto; /* Mantiene la proporción del ícono */
+}
+
+.icon-link:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave del fondo */
 }

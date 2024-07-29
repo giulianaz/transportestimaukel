@@ -3,22 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla con Navbar</title>
+    <title>Transportes Timaukel</title>
     <link rel="stylesheet" href="estilos/index.css">
 </head>
 <body>
+    <div class="top-bar"></div>
     <nav class="navbar">
-        <div class="logo"><a href="#">Mi Sitio</a></div>
+        <div class="logo">
+            <a href="/"><img src="img/logo.png" alt="Logo de Mi Sitio"></a>
+        </div>
         <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Educación</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="/" class="selected">Inicio</a></li>
+            <li><a href="/rutas">Rutas de Transportes</a></li>
+            <li><a href="/sobre">Sobre Nosotros</a></li>
+            <li><a href="/contacto">Contacto</a></li>
         </ul>
     </nav>
-    <div class="content">
-        <h1>Bienvenido a Mi Sitio</h1>
-        <p>Esta es una plantilla básica con un navbar.</p>
+    <div class="banner">
+        <img src="img/camion.jpg" alt="Camión" class="banner-image">
+        <div class="info-box">
+            <h2 class="info-title">Transportes Timaukel Ltda.</h2>
+            <h3 class="info-subtitle">Transportes de vehículos</h3>
+            <p>Empresa magallánica dedicada al traslado de vehículos en la patagonia chilena.</p>
+            <a href="/contacto" class="info-button">Cotiza aquí</a>
+        </div>
     </div>
+    <div class="content">
+        <div class="card-container">
+            <div class="card">
+                <img src="img/confiable.png" alt="Logo 1" class="card-logo">
+                <h2 class="card-title">Confiabilidad</h2>
+                <p class="card-description">Garantizamos que todos los vehículos lleguen sin problemas, con contacto directo para evitar daños y chequeos exhaustivos del estado del vehículo.</p>
+            </div>
+            <div class="card">
+                <img src="img/responsable.png" alt="Logo 2" class="card-logo">
+                <h2 class="card-title">Responsabilidad</h2>
+                <p class="card-description">Nos destacamos por nuestra puntualidad. Cada entrega se realiza a tiempo, con un enfoque en la precisión y cumplimiento de los horarios.</p>
+            </div>
+            <div class="card">
+                <img src="img/trato.png" alt="Logo 3" class="card-logo">
+                <h2 class="card-title">Trato Directo</h2>
+                <p class="card-description">Ofrecemos comunicación directa con un ejecutivo, brindando confianza y seguridad. Siempre tendrás a alguien disponible para resolver tus dudas.</p>
+            </div>
+            <div class="card">
+                <img src="img/experiencia.png" alt="Logo 4" class="card-logo">
+                <h2 class="card-title">Experiencia</h2>
+                <p class="card-description">Nuestro equipo tiene más de 20 años de experiencia en el sector. La experiencia de nuestros conductores y personal asegura un servicio profesional y confiable.</p>
+            </div>
+            <div class="card">
+                <img src="img/maquinaria.png" alt="Logo 5" class="card-logo">
+                <h2 class="card-title">Maquinaria</h2>
+                <p class="card-description">Contamos con camiones y rampas adecuadas para un transporte seguro. Nuestra maquinaria garantiza la protección de la carga y la seguridad del entorno.</p>
+            </div>
+            <div class="card">
+                <img src="img/seguridad.png" alt="Logo 6" class="card-logo">
+                <h2 class="card-title">Seguridad</h2>
+                <p class="card-description">Aseguramos la protección de la carga, el personal y terceros mediante rigurosos protocolos de seguridad y tecnologías avanzadas para minimizar riesgos.</p>
+            </div>
+        </div> 
+        
+        <div class="solution-section">
+            <div class="solution-title-container">
+                <div class="line"></div>
+                <h2 class="solution-title">Tu Solución de Transporte Confiable y Segura</h2>
+            </div>
+            <p class="solution-description">
+                Elige Transportes Timaukel y confía en la seguridad y profesionalismo que ofrecemos. Nuestro equipo está comprometido en brindarte un servicio excepcional y sin preocupaciones. No dudes en contactarnos para cualquier consulta o cotización; estamos aquí para ayudarte en cada paso del proceso. Con nosotros, tu vehículo está en las mejores manos.            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2020 Transportes Timaukel Ltda.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/transportes_timaukel_/" target="_blank" class="social-link">
+                    <img src="img/instagram-logo.png" alt="Instagram" class="footer-icon">
+                    <p>@transportes_timaukel_</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed-icons">
+        <a href="https://www.instagram.com/transportes_timaukel_/" target="_blank" class="icon-link">
+            <img src="img/ig.png" alt="Instagram" class="fixed-icon">
+        </a>
+        <a href="https://w.app/TransportesTimaukel" class="icon-link">
+            <img src="img/wsp.png" alt="WhatsApp" class="fixed-icon">
+        </a>
+    </div>
+
 </body>
 </html>

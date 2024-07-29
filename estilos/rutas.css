@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #003366; /* Azul oscuro para la franja */
+    height: 18px; /* Ajusta la altura según sea necesario */
+    width: 100%; /* Ancho completo */
+    clip-path: polygon(-10% 0, 100% 0, 98% 100%, -10% 100%); /* Forma con extremos diagonales */
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega sombra para profundidad */
+    margin-top: 5px; /* Espacio debajo de la franja azul */
+}
+
+.navbar .logo img {
+    height: 70px; /* Ajusta el tamaño según sea necesario */
+    margin-left: 200px; /* Ajusta según sea necesario */
+    margin-top: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center; /* Centra los enlaces */
+    margin-top: 0; /* Elimina margen superior para alinear bien con el logo */
+}
+
+.nav-links li {
+    margin-left: 1.5em;
+}
+
+.nav-links a {
+    color: rgb(129, 129, 129);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bolder;
+    letter-spacing: 0.05em; /* Más separación entre letras */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Efecto suave para color de fondo */
+    padding: 0.5em; /* Espacio interno para el efecto de fondo */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.nav-links a:hover,
+.nav-links a.selected {
+    
+    color: #003366; /* Azul oscuro para el fondo */
+}
+
+.content {
+    padding: 2em;
+    text-align: center;
+}
+
+.content h1 {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.content p {
+    font-size: 1.2em;
+}

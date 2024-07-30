@@ -70,6 +70,25 @@
             <p class="solution-description">
                 Elige Transportes Timaukel y confía en la seguridad y profesionalismo que ofrecemos. Nuestro equipo está comprometido en brindarte un servicio excepcional y sin preocupaciones. No dudes en contactarnos para cualquier consulta o cotización; estamos aquí para ayudarte en cada paso del proceso. Con nosotros, tu vehículo está en las mejores manos.            </p>
         </div>
+        <!-- Contador Animado -->
+        <div class="counter-section">
+            <h2 class="counter-title">¿Por qué elegirnos?</h2>
+            <div class="counter-container">
+                <div class="counter-item">
+                    <span class="counter" data-target="80">0</span>
+                    <p>Clientes satisfechos</p>
+                </div>
+                <div class="counter-item">
+                    <span class="counter" data-target="4128">0</span>
+                    <p>Vehículos transportados</p>
+                </div>
+                <div class="counter-item">
+                    <span class="counter" data-target="20">0</span>
+                    <p>Años de personal con experiencia</p>
+                </div>
+            </div>
+        </div>
+
     </div>
     <footer>
         <div class="footer-content">
@@ -82,6 +101,20 @@
                     <p>@transportes_timaukel_</p>
                 </a>
             </div>
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <img src="img/cel.png" alt="Teléfono" class="contact-icon">
+                    <a href="tel:+56987109609">+56 9 87109609</a>
+                </div>
+                <div class="contact-item">
+                    <img src="img/cel.png" alt="Teléfono" class="contact-icon">
+                    <a href="tel:+56968317318">+56 9 68317318</a>
+                </div>
+                <div class="contact-item">
+                    <img src="img/correo.png" alt="Correo" class="contact-icon">
+                    <a href="mailto:felipepizarror@gmail.com">felipepizarror@gmail.com</a>
+                </div>
+            </div>
         </div>
     </footer>
     <div class="fixed-icons">
@@ -92,6 +125,27 @@
             <img src="img/wsp.png" alt="WhatsApp" class="fixed-icon">
         </a>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace('+', '') || 0;
+                    const speed = 2000; // Duración de la animación en milisegundos
+                    const increment = target / speed * 100;
+                    if (count < target) {
+                        counter.innerText = `+${Math.ceil(count + increment)}`;
+                        setTimeout(updateCount, 100);
+                    } else {
+                        counter.innerText = `+${target}`;
+                    }
+                }
+                updateCount();
+            });
+        });
+    </script>
+    
 
 </body>
 </html>

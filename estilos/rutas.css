@@ -299,3 +299,32 @@ footer {
     color: #000;
     margin-top: 10px;
 }
+
+.footer-contact {
+    position: absolute;
+    right: 10%; /* Ajusta la posición izquierda según sea necesario */
+    text-align: right;
+    margin-top: -30px;
+}
+
+.footer-contact .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.footer-contact .contact-item p {
+    margin: 0;
+    margin-left: 0.5em;
+}
+
+.footer-contact a {
+    color: white; /* Asegura que el texto sea blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.contact-icon {
+    width: 20px; /* Ajusta el tamaño del ícono */
+    height: 20px; /* Ajusta el tamaño del ícono */
+    margin-right: 0.5em; /* Espacio entre el ícono y el texto */
+}

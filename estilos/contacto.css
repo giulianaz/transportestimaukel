@@ -278,35 +278,6 @@ footer {
     margin-right: 0.5em;
 }
 
-.fixed-icons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
-}
-
-.icon-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-.icon-link img {
-    width: 30px;
-    height: 30px;
-}
-
-.icon-link:hover {
-    background-color: #f0f0f0;
-}
 
 footer {
     background-color: #003366;
@@ -355,16 +326,6 @@ footer {
     margin: 0;
 }
 
-.fixed-icons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
-}
-
 .icon-link {
     display: flex;
     align-items: center;
@@ -373,11 +334,6 @@ footer {
     border-radius: 50%;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.fixed-icon {
-    width: 40px;
-    height: auto;
 }
 
 .icon-link:hover {
@@ -462,4 +418,25 @@ footer {
     margin: 0; /* Elimina el margen predeterminado */
     font-size: 3em; /* Tamaño del texto */
     font-weight: 700;
+}
+
+.contact-icon {
+    width: 20px; /* Ajusta el tamaño del ícono */
+    height: 20px; /* Ajusta el tamaño del ícono */
+    margin-right: 0.5em; /* Espacio entre el ícono y el texto */
+}
+
+.fixed-icons {
+    position: fixed; /* Fija el contenedor en la esquina */
+    bottom: 20px; /* Espacio desde el borde inferior */
+    right: 20px; /* Espacio desde el borde derecho */
+    display: flex; /* Alinea los íconos horizontalmente */
+    flex-direction: column; /* Disposición vertical de los íconos */
+    gap: 10px; /* Espacio entre los íconos */
+    z-index: 1000; /* Asegura que los íconos estén encima de otros elementos */
+}
+
+.fixed-icon {
+    width: 40px; /* Tamaño del ícono */
+    height: auto; /* Mantiene la proporción del ícono */
 }

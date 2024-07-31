@@ -19,53 +19,83 @@
             <li><a href="/contacto" class="selected">Contacto</a></li>
         </ul>
     </nav>
+    <div class="page-title">
+        <p>CONTACTO</p>
+     </div>
     <div class="content">
         <div class="contact-container">
             <form id="contact-form" class="contact-form" action="https://formspree.io/f/xeojgaar" method="POST">
                 <h2>Formulario de Contacto</h2>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" required>
-                <label for="telefono">Número:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="+56" required>
-                <label for="tipo-vehiculo">Tipo de vehículo/s:</label>
-                <input type="text" id="tipo-vehiculo" name="tipo-vehiculo" required>
-                <label for="cantidad-vehiculos">Cantidad de vehículos:</label>
-                <input type="number" id="cantidad-vehiculos" name="cantidad-vehiculos" required>
-                <label for="estado-vehiculo">Estado del vehículo:</label>
-                <select id="estado-vehiculo" name="estado-vehiculo" required>
-                    <option value="Andando">Andando</option>
-                    <option value="Panne">Panne</option>
-                </select>
-                <label for="origen">Origen:</label>
-                <input type="text" id=" origen" name="origen" required>
-                <label for="destino">Destino:</label>
-                <input type="text" id="destino" name="destino" required>
-                <label for="fecha">Fecha (aproximadamente):</label>
-                <input type="date" id="fecha" name="fecha" required>
-                <label for="mensaje">Mensaje (opcional):</label>
-                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                <div class="form-row">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-row">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form-row">
+                    <label for="telefono">Número:</label>
+                    <input type="tel" id="telefono" name="telefono" value="+56" required>
+                </div>
+                <div class="form-row">
+                    <label for="tipo-vehiculo">Tipo de vehículo/s:</label>
+                    <input type="text" id="tipo-vehiculo" name="tipo-vehiculo" required>
+                </div>
+                <div class="form-row">
+                    <label for="cantidad-vehiculos">Cantidad de vehículos:</label>
+                    <input type="number" id="cantidad-vehiculos" name="cantidad-vehiculos" required>
+                </div>
+                <div class="form-row">
+                    <label for="estado-vehiculo">Estado del vehículo:</label>
+                    <select id="estado-vehiculo" name="estado-vehiculo" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="Andando">Andando</option>
+                        <option value="Panne">Panne</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="origen">Origen:</label>
+                    <input type="text" id="origen" name="origen" required>
+                </div>
+                <div class="form-row">
+                    <label for="destino">Destino:</label>
+                    <input type="text" id="destino" name="destino" required>
+                </div>
+                <div class="form-row">
+                    <label for="fecha">Fecha (aproximadamente):</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="form-row">
+                    <label for="mensaje">Mensaje (opcional):</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                </div>
                 <button type="submit">Enviar</button>
             </form>
+            
+            
+            
+            
             <div class="info-box">
-                <h2>Información de Contacto</h2>
+                <h2>Transportes Timaukel</h2>
                 <p>Nuestra empresa tiene su base de operaciones en la ciudad de Punta Arenas. También contamos con operador en la ciudad de Coyhaique, con la finalidad de poder brindar nuestro servicio desde ambas ciudades hasta la ciudad de Santiago y San Antonio, esto considerando la posibilidad de cargar y descargar vehículos en todas las ciudades intermedias.</p>
-                <div class="footer-contact">
-                    <div class="contact-item">
-                        <img src="IMG/cel.png" alt="Teléfono" class="contact-icon">
+                <div class="contact-gris">
+                    <div class="gris-item">
+                        <img src="IMG/cel.png" alt="Teléfono" class="gris-icon">
                         <a href="tel:+56987109609">+56 9 87109609</a>
                     </div>
-                    <div class="contact-item">
-                        <img src="IMG/cel.png" alt="Teléfono" class="contact-icon">
+                    <div class="gris-item">
+                        <img src="IMG/cel.png" alt="Teléfono" class="gris-icon">
                         <a href="tel:+56968317318">+56 9 68317318</a>
                     </div>
-                    <div class="contact-item">
-                        <img src="IMG/correo.png" alt="Correo" class="contact-icon">
+                    <div class="gris-item">
+                        <img src="IMG/correo.png" alt="Correo" class="gris-icon">
                         <a href="mailto:felipepizarror@gmail.com">felipepizarror@gmail.com</a>
                     </div>
                 </div>
-            </div>
+            </div>            
+
+
         </div>
     </div>
     <footer>

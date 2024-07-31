@@ -60,8 +60,10 @@ body {
 }
 
 .content {
-    padding: 2em;
+    padding: 4em;
     text-align: center;
+    margin-left: 270px;
+    margin-right: 270px;
 }
 
 .contact-container {
@@ -70,7 +72,13 @@ body {
     margin: 2em 0;
 }
 
-.contact-form,
+.contact-form{
+    width: 45%; /* Reducido al 45% del contenedor padre */
+    padding: 0.8em; /* Reducido el padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajustada la sombra */
+    border-radius: 8px;
+}
+
 .info-box {
     width: 45%; /* Reducido al 45% del contenedor padre */
     padding: 0.8em; /* Reducido el padding */
@@ -91,8 +99,6 @@ body {
 .contact-form button {
     display: block;
     width: 100%;
-    margin-bottom: 1em;
-    padding: 0.5em;
 }
 
 .contact-form input,
@@ -111,36 +117,126 @@ body {
 }
 
 .contact-form button:hover {
-    background-color: #00509e;
+    background-color: #003366;
 }
 
+/* Estilo general para el formulario */
+/* Estilo general para el formulario */
+/* Estilo general para el formulario */
+.contact-form {
+    border-top: 8px solid #003366; /* Borde azul solo en la parte superior */
+    display: flex;
+    flex-direction: column; /* Los elementos estarán en una columna */
+    max-width: 1000px; /* Ajusta según sea necesario */
+    margin: 0 auto;
+}
+
+/* Estilo para cada fila de etiqueta y campo de entrada */
+.contact-form .form-row {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    margin-bottom: 10px; /* Espacio entre filas */
+}
+
+/* Estilo para las etiquetas */
+.contact-form label {
+    flex: 0 0 200px; /* Ancho fijo para las etiquetas, ajusta según sea necesario */
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para los campos de entrada */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    flex: 1; /* Los campos de entrada toman el resto del espacio disponible */
+    padding: 6px; /* Espaciado interno reducido en los campos */
+    margin-bottom: 5px; /* Espacio entre campos reducido */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Estilo para el botón */
+.contact-form button {
+    padding: 8px 4px; /* Espaciado interno ajustado */
+    background-color: #003366; /* Cambia el color según tus preferencias */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Tamaño de fuente ajustado */
+}
+
+/* Estilo para el título del formulario */
+.contact-form h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px; /* Espacio reducido debajo del título */
+}
+
+.contact-form button:hover{
+    width: 100%;
+    text-align: center;
+    background-color: #01162b;
+}
+
+/* Estilo general para el cuadro de información */
 .info-box {
-    background-color: #f0f0f0;
-    text-align: left;
-    font-size: 1.2em; /* Tamaño de fuente aumentado */
-    color: black; /* Texto en negro */
+    padding: 15px; /* Reduce el padding para hacer el cuadro más pequeño */
+    background-color: #f9f9f9; /* Fondo claro para destacar el contenido */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Ajusta según sea necesario */
+    margin: 0 auto;
+    height: auto; /* Ajuste automático de la altura según el contenido */
+    min-height: 300px !important; /* Altura mínima para evitar que el cuadro sea demasiado pequeño */
 }
 
-.footer-contact {
-    margin-top: 1em;
+/* Estilo para el título dentro del cuadro */
+.info-box h2 {
+    font-size: 22px; /* Tamaño del texto del título, ajustado para un cuadro más pequeño */
+    margin-bottom: 10px; /* Reduce el margen inferior */
+    color: #333; /* Color del texto del título */
 }
 
-.footer-contact .contact-item {
+/* Estilo para el párrafo de texto */
+.info-box p {
+    font-size: 14px; /* Tamaño del texto del párrafo, ajustado para un cuadro más pequeño */
+    color: #555; /* Color del texto del párrafo */
+    margin-bottom: 15px; /* Reduce el margen inferior */
+}
+
+/* Estilo para el contenedor de los ítems de contacto */
+.contact-gris {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para cada ítem de contacto */
+.gris-item {
     display: flex;
     align-items: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 8px; /* Reduce el margen inferior */
 }
 
-.footer-contact .contact-item img {
-    width: 20px;
-    height: 20px;
-    margin-right: 0.5em;
+/* Estilo para los íconos de contacto */
+.gris-icon {
+    width: 20px; /* Ajusta según el tamaño deseado */
+    height: auto;
+    margin-right: 8px; /* Reduce el margen derecho */
 }
 
-.footer-contact a {
-    color: #003366;
+/* Estilo para los enlaces de contacto */
+.contact-gris a {
+    font-size: 14px; /* Tamaño del texto de los enlaces, ajustado para un cuadro más pequeño */
+    color: #007BFF; /* Color del texto de los enlaces */
     text-decoration: none;
 }
+
+.contact-gris a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+
 
 footer {
     background-color: #003366;
@@ -316,4 +412,54 @@ footer {
     width: 20px;
     height: 20px;
     margin-right: 0.5em;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.info-box {
+    border-top: 8px solid #d8d8d8; /* Borde azul solo en la parte superior */
+    width: 45%; /* Mantén el mismo ancho si lo prefieres */
+    padding: 20px;
+    background-color: #003366;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    /* Agrega un max-height o altura específica si es necesario */
+    max-height: 400px; /* Ajusta según lo que necesites */
+    overflow: auto; /* Permite desplazamiento si el contenido es mayor que el max-height */
+}
+
+.info-box h2{
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.info-box p{
+    color: #dfdddd;
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.info-box a{
+    color: #fff;
+}
+
+.page-title {
+    margin-top: 50px;;
+    color: #003366; /* Color azul para el fondo del título */
+    padding: 1em; /* Espacio alrededor del título */
+    text-align: center; /* Centra el texto */
+    margin-bottom: -40px;
+}
+
+.page-title p {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 3em; /* Tamaño del texto */
+    font-weight: 700;
 }

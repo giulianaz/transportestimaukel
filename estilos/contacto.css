@@ -9,25 +9,25 @@ body {
 }
 
 .top-bar {
-    background-color: #003366; /* Azul oscuro para la franja */
-    height: 18px; /* Ajusta la altura según sea necesario */
-    width: 100%; /* Ancho completo */
-    clip-path: polygon(-10% 0, 100% 0, 98% 100%, -10% 100%); /* Forma con extremos diagonales */
+    background-color: #003366;
+    height: 18px;
+    width: 100%;
+    clip-path: polygon(-10% 0, 100% 0, 98% 100%, -10% 100%);
 }
 
 .navbar {
     background-color: #ffffff;
     color: white;
-    padding: 1em;
+    padding: 1.9em;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega sombra para profundidad */
-    margin-top: 5px; /* Espacio debajo de la franja azul */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 5px;
 }
 
 .navbar .logo img {
-    height: 70px; /* Ajusta el tamaño según sea necesario */
-    margin-left: 200px; /* Ajusta según sea necesario */
+    height: 80px;
+    margin-left: 200px;
     margin-top: 2px;
 }
 
@@ -35,8 +35,8 @@ body {
     list-style: none;
     display: flex;
     flex-grow: 1;
-    justify-content: center; /* Centra los enlaces */
-    margin-top: 0; /* Elimina margen superior para alinear bien con el logo */
+    justify-content: center;
+    margin-top: 0;
 }
 
 .nav-links li {
@@ -48,16 +48,15 @@ body {
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bolder;
-    letter-spacing: 0.05em; /* Más separación entre letras */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Efecto suave para color de fondo */
-    padding: 0.5em; /* Espacio interno para el efecto de fondo */
-    border-radius: 4px; /* Bordes redondeados */
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5em;
+    border-radius: 4px;
 }
 
 .nav-links a:hover,
 .nav-links a.selected {
-    
-    color: #003366; /* Azul oscuro para el fondo */
+    color: #003366;
 }
 
 .content {
@@ -65,18 +64,233 @@ body {
     text-align: center;
 }
 
-.content h1 {
-    margin-bottom: 1em;
-    font-size: 2em;
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
 }
 
-.content p {
-    font-size: 1.2em;
+.contact-form,
+.info-box {
+    width: 45%; /* Reducido al 45% del contenedor padre */
+    padding: 0.8em; /* Reducido el padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajustada la sombra */
+    border-radius: 8px;
+}
+
+.contact-form h2,
+.info-box h2 {
+    margin-bottom: 1em;
+    color: #003366;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.contact-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #00509e;
+}
+
+.info-box {
+    background-color: #f0f0f0;
+    text-align: left;
+    font-size: 1.2em; /* Tamaño de fuente aumentado */
+    color: black; /* Texto en negro */
+}
+
+.footer-contact {
+    margin-top: 1em;
+}
+
+.footer-contact .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.footer-contact .contact-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+}
+
+.footer-contact a {
+    color: #003366;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-text {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-icon {
+    width: 24px;
+    height: auto;
+    margin-right: 0.5em;
+}
+
+.fixed-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.icon-link img {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-link:hover {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-text {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-icon {
+    width: 24px;
+    height: auto;
+    margin-right: 0.5em;
+}
+
+.footer-social p {
+    margin: 0;
+}
+
+.fixed-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-icon {
+    width: 40px;
+    height: auto;
+}
+
+.icon-link:hover {
+    background-color: #f0f0f0;
 }
 
 .footer-contact {
     position: absolute;
-    right: 10%; /* Ajusta la posición izquierda según sea necesario */
+    right: 10%;
     text-align: right;
     margin-top: -30px;
 }
@@ -90,15 +304,16 @@ body {
 .footer-contact .contact-item p {
     margin: 0;
     margin-left: 0.5em;
+    color: black; /* Texto en negro */
 }
 
 .footer-contact a {
-    color: white; /* Asegura que el texto sea blanco */
-    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: white;
+    text-decoration: none;
 }
 
 .contact-icon {
-    width: 20px; /* Ajusta el tamaño del ícono */
-    height: 20px; /* Ajusta el tamaño del ícono */
-    margin-right: 0.5em; /* Espacio entre el ícono y el texto */
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
 }

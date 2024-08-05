@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transportes Timaukel</title>
     <link rel="stylesheet" href="estilos/index.css">
 </head>
+
 <body>
     <div class="top-bar"></div>
     <nav class="navbar">
@@ -18,6 +20,19 @@
             <li><a href="/sobre">Sobre Nosotros</a></li>
             <li><a href="/contacto">Contacto</a></li>
         </ul>
+    </nav>
+    <nav class="navbar-mobile">
+        <div class="navbar-header">
+            <img src="IMG/logo-mobile.png" alt="Logo" class="logo">
+            <label for="toggle">&#9776;</label>
+        </div>
+        <input type="checkbox" id="toggle">
+        <div class="menu-items">
+            <div class="menu-item"><a href="/">Inicio</a></div>
+            <div class="menu-item"><a href="/rutas">Rutas de Transportes</a></div>
+            <div class="menu-item"><a href="/sobre">Sobre Nosotros</a></div>
+            <div class="menu-item"><a href="/contacto">Contacto</a></div>
+        </div>
     </nav>
     <div class="banner">
         <img src="IMG/camion.jpg" alt="Camión" class="banner-image">
@@ -33,42 +48,51 @@
             <div class="card">
                 <img src="IMG/confiable.png" alt="Logo 1" class="card-logo">
                 <h2 class="card-title">Confiabilidad</h2>
-                <p class="card-description">Garantizamos que todos los vehículos lleguen sin problemas, con contacto directo para evitar daños y chequeos exhaustivos del estado del vehículo.</p>
+                <p class="card-description">Garantizamos que todos los vehículos lleguen sin problemas, con contacto
+                    directo para evitar daños y chequeos exhaustivos del estado del vehículo.</p>
             </div>
             <div class="card">
                 <img src="IMG/responsable.png" alt="Logo 2" class="card-logo">
                 <h2 class="card-title">Responsabilidad</h2>
-                <p class="card-description">Nos destacamos por nuestra puntualidad. Cada entrega se realiza a tiempo, con un enfoque en la precisión y cumplimiento de los horarios.</p>
+                <p class="card-description">Nos destacamos por nuestra puntualidad. Cada entrega se realiza a tiempo,
+                    con un enfoque en la precisión y cumplimiento de los horarios.</p>
             </div>
             <div class="card">
                 <img src="IMG/trato.png" alt="Logo 3" class="card-logo">
                 <h2 class="card-title">Trato Directo</h2>
-                <p class="card-description">Ofrecemos comunicación directa con un ejecutivo, brindando confianza y seguridad. Siempre tendrás a alguien disponible para resolver tus dudas.</p>
+                <p class="card-description">Ofrecemos comunicación directa con un ejecutivo, brindando confianza y
+                    seguridad. Siempre tendrás a alguien disponible para resolver tus dudas.</p>
             </div>
             <div class="card">
                 <img src="IMG/experiencia.png" alt="Logo 4" class="card-logo">
                 <h2 class="card-title">Experiencia</h2>
-                <p class="card-description">Nuestro equipo tiene más de 20 años de experiencia en el sector. La experiencia de nuestros conductores y personal asegura un servicio profesional y confiable.</p>
+                <p class="card-description">Nuestro equipo tiene más de 20 años de experiencia en el sector. La
+                    experiencia de nuestros conductores y personal asegura un servicio profesional y confiable.</p>
             </div>
             <div class="card">
                 <img src="IMG/maquinaria.png" alt="Logo 5" class="card-logo">
                 <h2 class="card-title">Maquinaria</h2>
-                <p class="card-description">Contamos con camiones y rampas adecuadas para un transporte seguro. Nuestra maquinaria garantiza la protección de la carga y la seguridad del entorno.</p>
+                <p class="card-description">Contamos con camiones y rampas adecuadas para un transporte seguro. Nuestra
+                    maquinaria garantiza la protección de la carga y la seguridad del entorno.</p>
             </div>
             <div class="card">
                 <img src="IMG/seguridad.png" alt="Logo 6" class="card-logo">
                 <h2 class="card-title">Seguridad</h2>
-                <p class="card-description">Aseguramos la protección de la carga, el personal y terceros mediante rigurosos protocolos de seguridad y tecnologías avanzadas para minimizar riesgos.</p>
+                <p class="card-description">Aseguramos la protección de la carga, el personal y terceros mediante
+                    rigurosos protocolos de seguridad y tecnologías avanzadas para minimizar riesgos.</p>
             </div>
-        </div> 
-        
+        </div>
+
         <div class="solution-section">
             <div class="solution-title-container">
                 <div class="line"></div>
                 <h2 class="solution-title">Tu Solución de Transporte Confiable y Segura</h2>
             </div>
             <p class="solution-description">
-                Elige Transportes Timaukel y confía en la seguridad y profesionalismo que ofrecemos. Nuestro equipo está comprometido en brindarte un servicio excepcional y sin preocupaciones. No dudes en contactarnos para cualquier consulta o cotización; estamos aquí para ayudarte en cada paso del proceso. Con nosotros, tu vehículo está en las mejores manos.            </p>
+                Elige Transportes Timaukel y confía en la seguridad y profesionalismo que ofrecemos. Nuestro equipo está
+                comprometido en brindarte un servicio excepcional y sin preocupaciones. No dudes en contactarnos para
+                cualquier consulta o cotización; estamos aquí para ayudarte en cada paso del proceso. Con nosotros, tu
+                vehículo está en las mejores manos. </p>
         </div>
         <!-- Contador Animado -->
         <div class="counter-section">
@@ -126,15 +150,15 @@
         </a>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const counters = document.querySelectorAll('.counter');
-    
+
             const updateCount = (counter) => {
                 const target = +counter.getAttribute('data-target');
                 const count = +counter.innerText.replace('+', '') || 0;
                 const speed = 2000; // Duración de la animación en milisegundos
                 const increment = target / speed * 100;
-    
+
                 if (count < target) {
                     counter.innerText = `+${Math.ceil(count + increment)}`;
                     setTimeout(() => updateCount(counter), 100);
@@ -142,7 +166,7 @@
                     counter.innerText = `+${target}`;
                 }
             };
-    
+
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -153,14 +177,15 @@
             }, {
                 threshold: 0.1 // El umbral de visibilidad requerido para desencadenar la animación
             });
-    
+
             counters.forEach(counter => {
                 observer.observe(counter);
             });
         });
     </script>
-    
-    
+
+
 
 </body>
+
 </html>

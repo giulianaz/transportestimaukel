@@ -441,6 +441,9 @@ footer {
     height: auto; /* Mantiene la proporción del ícono */
 }
 
+.navbar-mobile {
+    display: none;
+}
 
 /*  mobile */
 @media screen and (max-width: 768px) {
@@ -566,7 +569,6 @@ footer {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
-
     .logo {
         height: 40px;
     }

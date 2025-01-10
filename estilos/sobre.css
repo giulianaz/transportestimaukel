@@ -402,6 +402,33 @@ footer {
     display: none;
 }
 
+.aliados {
+    display: flex; /* Alinea las imágenes en fila */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Alinea las imágenes verticalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se muevan a una nueva fila si es necesario */
+}
+
+.aliados img {
+    height: 200px; /* Altura uniforme */
+    object-fit: contain; /* Mantiene proporciones */
+}
+
+/* Estilos para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+    .aliados {
+        flex-direction: column; /* Coloca las imágenes en columna */
+        gap: 10px; /* Reduce el espacio entre las imágenes */
+    }
+
+    .aliados img {
+        height: 80px; /* Reduce el tamaño de las imágenes para pantallas pequeñas */
+    }
+}
+
+
+
 /*  mobile */
 @media screen and (max-width: 768px) {
 
